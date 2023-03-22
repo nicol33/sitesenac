@@ -1,0 +1,232 @@
+﻿@model Interesse
+@{
+ViewData["Title"] = "Hotsite"; 
+}
+
+<div class="row">
+<div class="col-5">
+    <h2>Iniciativa Saúde da Cidade</h2>
+    <p>
+      Vida saudável significa realizar escolhas que resultem em uma mente e um corpo saudáveis. Além disso, é sinal de que não somos doentes. Para conquistar isso, é importante se alimentar bem e praticar exercícios físicos, além de adotar outros hábitos.
+    </p>
+    <p>
+       O ideal ao procurar dicas para uma vida saudável é diminuir a pressão e o estresse, ao mesmo tempo que nos mantemos motivados e empenhados em perseguir os benefícios que esses hábitos podem trazer.
+De modo geral, a importância de hábitos saudáveis é notável em 3 benefícios principais, sendo eles: Mais saúde, Mais qualidade de vida e Maior longevidade
+    </p>
+</div>
+
+<div class="col-7">
+<img class="img-fluid" src="~/img/img01.jpg" alt="">
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-4" style="border: 1px solid black;">
+    <h2>Fique em contato!</h2>
+    <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+    <form name="formulario"   action="/Home/Cadastrar "   method="POST" style="border-width: 1px;" >
+        <div>
+            <label asp-for="Nome">Nome:</label>
+            <input asp-for="Nome"  name='nome' />
+        </div>
+        <div>
+            <label asp-for="Email">Email:</label>
+            <input asp-for="Email" name="email" />
+        </div>
+        <div>
+            <label asp-for="Mensagem">Mensagem (opcional):</label>
+            <textarea asp-for="Mensagem" name="mensagem"></textarea>
+        </div>
+      <center>
+        <div>
+            <input type="submit" value="Enviar" onclick="return validar()" />
+        </div>
+   </center>
+    </form>
+</div>
+
+
+<div class="col-8" >
+  <div class="row">
+    <div class="col-4" 
+   
+<center>
+  <img src="~/img/ag.jpg" width="155px" height="155px">
+     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1">
+Agenda de eventos
+</button>
+    </center>
+      </div>
+  
+  <div class="col-4"  
+  <center>
+     <img src="~/img/dic.png" width="155px" height="155px">
+     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal2">
+  Dicas de vida saudável
+</button>
+    </center> 
+  
+  </div>
+  
+  
+  <div class="col-4"  
+  
+   <center>
+      <img src="~/img/parceria.jpg" width="155px" height="155px">
+     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal3">
+ Apoiadores
+</button>
+    </center>
+  </div>
+
+ </div>
+</div>
+</div>
+
+
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agenda</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       16/09/23 09:30 - Caminhada
+      <p> Caminhar é um exercício equilibrado para a maioria das pessoas, independentemente da idade. Muitas pessoas conseguem manter um nível modesto de forma física através de um programa de caminhadas regulares. Caminhar é relativamente leve para as articulações.</p>
+      <br>
+         17/09/23 11:30 - Pilates
+      <p> Pilates é uma série de exercícios projetados para aumentar a flexibilidade e fortalecimento dos músculos centrais (abdominais e das costas). Embora, com frequência, acredite-se que o Pilates é um programa para atletas experientes, os programas de Pilates podem ser elaborados para pessoas de todos os níveis de forma física. </p>
+        <br>
+         18/09/23 14:00 - Exercício aeróbico na água
+     <p> O exercício aeróbico na água é excelente para os idosos e para as que têm os músculos fracos porque previne as quedas sobre uma superfície dura e proporciona um apoio para o corpo. É frequentemente usado por pessoas com artrite e algumas vezes para a reabilitação de lesão. O exercício aeróbico na água envolve a realização de vários tipos de movimentos musculares ou apenas na caminhada na água a uma profundidade entre a cintura e os ombros</p>
+       
+       
+       
+       
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Dicas de vida Saudável</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+   <p>1. Cuide bem dos seus relacionamentos
+Familiares, amigos e colegas são importantes suporte emocional.
+
+Além disso, relacionamentos saudáveis promovem uma sensação positiva, melhorando o humor e a reação a situações adversas.</p>
+      <br>
+      <p>2. Tenha metas e objetivos 
+De forma que gerem motivação para superar seus desafios, aumentando o seu senso de propósito. 
+
+Apenas tenha cuidado para não eleger metas inalcançáveis e acabar se frustrando e gerando cansaço mental.</p>
+<br>
+<p>3. Cuide da alimentação e inclua vegetais nela
+“Coma comida, não muita, principalmente vegetais”
+As frutas, legumes e vegetais são ricos em vitaminas, minerais, antioxidantes e fibras, que ajudam na manutenção da saúde do nosso organismo e reduzem as chances de doenças cardíacas, diabetes tipo 2 e obesidade.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Apoiadores</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img  src="~/img/img02.jpg" width="100px" height="100px" style="display: inline-block; vertical-align:top;" > 
+        <p style="display:inline-block;">Empresa 1</p>
+        <p>Nosso público-alvo é formado por pessoas que estão conectadas diretamente com a cultura sportswear / athleisure, trazendo como principal objetivo inspirar o lifestyle esportivo em todos os momentos da vida.</p>
+        <img src="~/img/img03.jpg" width="100px" height="100px" style="display: inline-block; vertical-align:top;">
+         <p style="display:inline-block;">Empresa 2</p>
+<p>Marca de suplementos, nutricosméticos, nutrição esportiva e produtos para o bem-estar e cuidados pessoais voltados para a qualidade de vida, saúde e beleza. </p>
+
+<br>
+         <img src="~/img/img04.jpg" width="100px" height="100px" style="display: inline-block; vertical-align:top;">
+          <p style="display:inline-block;">Empresa 3</p>
+<p>É a solução para quem precisa de um lanche rápido e delicioso, mas faz questão de cuidar da saúde. Nossos Wrappies são preparados com amor e cuidado por nossa equipe de cozinha que traz nas mãos aquele toque de comida feita em casa. </p>
+
+<br>
+          <img src="~/img/img05.jpg" width="100px" height="100px" style="display: inline-block; vertical-align:top;" >
+           <p style="display:inline-block;">Empresa 4</p>
+    <p>O Smart Fit GO é a plataforma de treinos online – gravados e ao vivo – exclusivos para clientes ativos da Smart Fit. São centenas de opções de treinos para você se exercitar quando e onde quiser. </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button> 
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  
+
+
+ function validar() {
+    
+    var nome = formulario.nome.value;
+ 
+      if (nome == "") {
+        alert('Preencha o campo Nome e realize a ação mais tarde');
+          formulario.nome.focus();
+          return false;
+       }
+  
+ var email = formulario.email.value;
+ 
+      if (email == "") {
+        alert('Preencha o campo Email e realize a ação mais tarde');
+          formulario.email.focus();
+          return false;
+       }
+  
+
+ 
+    var mensagem = formulario.mensagem.value;
+ 
+      if (mensagem == "") {
+        alert('Preencha o campo Mensagem e realize a ação mais tarde');
+          formulario.mensagem.focus();
+          return false;
+       }
+   alert("O cadastro foi realizado com sucesso")
+
+    }
+
+    
+    
+
+
+ 
+   
+    
+
+
+</script>
